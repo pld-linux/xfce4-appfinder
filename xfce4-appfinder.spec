@@ -1,5 +1,5 @@
 
-%define		_snap 20040813
+%define		_snap 20040816
 
 Summary:	Application finder for the XFce
 Summary(pl):	Wyszukiwacz aplikacji dla XFce
@@ -9,7 +9,7 @@ Release:	0.%{_snap}.1
 License:	BSD
 Group:		X11/Applications
 Source0:	http://ep09.pld-linux.org/~havner/xfce4/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	09d9b5169eb571b01acbef8cc02080ae
+# Source0-md5:	ebc4628902567683b08df5f3f9491118
 URL:		http://www.xfce.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
