@@ -40,6 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%{_bindir}/xfce4-appfinder
+%attr(755,root,root) %{_bindir}/xfce4-appfinder
 %{_desktopdir}/xfce4-appfinder.desktop
 %{_pixmapsdir}/xfce4-appfinder.png
