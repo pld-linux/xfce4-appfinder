@@ -9,7 +9,12 @@ Source0:        http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}
 # Source0-md5:	5077312a6390d20b9d0d44cc0891ee96
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/
-BuildRequires: 	libxfcegui4-devel >= 4.1.0
+BuildRequires:	autoconf >= 2.50
+BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	libtool
+BuildRequires:	libxfcegui4-devel >= 4.1.0
+BuildRequires:	pkgconfig
 Requires:	libxfcegui4 >= 4.1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
