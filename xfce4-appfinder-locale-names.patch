@@ -1,0 +1,12 @@
+diff -urN xfce4-appfinder-4.1.99.1.orig/configure.ac xfce4-appfinder-4.1.99.1/configure.ac
+--- xfce4-appfinder-4.1.99.1.orig/configure.ac	2004-11-06 15:42:41.000000000 +0100
++++ xfce4-appfinder-4.1.99.1/configure.ac	2004-11-27 19:46:20.642452968 +0100
+@@ -24,7 +24,7 @@
+ 
+ dnl Check for i18n support
+ BM_I18N([xfce4-appfinder], [be de es es_MX eu fa fi gu he it lt nl
+-		            pa pt_PT zh_CN])
++		            pa pt zh_CN])
+ 
+ dnl Check for required packages
+ BM_DEPEND([LIBXFCEGUI4], [libxfcegui4-1.0], [4.1.0])
