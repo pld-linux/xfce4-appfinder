@@ -1,12 +1,12 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl):	Wyszukiwarka aplikacji dla ¶rodowiska Xfce
 Name: 		xfce4-appfinder
-Version: 	4.1.99.2
+Version: 	4.1.99.3
 Release: 	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.berlios.de/pub/xfce-goodies/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	ce7a52a4236e56cd8bd51c2852776e80
+# Source0-md5:	e9ed791a6cd5b084c709003bdc298adc
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/
 BuildRequires: 	libxfcegui4-devel >= 4.1.0
