@@ -16,7 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 xfce4-appfinder shows system wide installed applications.
 
 %description -l pl
-xfce4-appfinder pokazuje aplikacji zainstalowane w systemie.
+xfce4-appfinder pokazuje aplikacje zainstalowane w systemie.
 
 %prep
 %setup -q
