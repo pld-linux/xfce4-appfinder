@@ -13,9 +13,9 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libtool
-BuildRequires:	libxfcegui4-devel >= 4.1.0
+BuildRequires:	libxfcegui4-devel >= 4.2.0
 BuildRequires:	pkgconfig
-Requires:	libxfcegui4 >= 4.1.0
+Requires:	libxfcegui4 >= 4.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
