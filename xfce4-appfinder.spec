@@ -1,12 +1,12 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl):	Wyszukiwarka aplikacji dla ¶rodowiska Xfce
 Name: 		xfce4-appfinder
-Version: 	4.2.1
+Version: 	4.2.2
 Release: 	1
 License:	GPL
 Group:		X11/Applications
-Source0:        http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
-# Source0-md5:	5077312a6390d20b9d0d44cc0891ee96
+Source0:	http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
+# Source0-md5:	0ef8c944e8aa2db06719e02b2c40d70c
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/
 BuildRequires:	autoconf >= 2.50
@@ -15,6 +15,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRequires:	libxfcegui4-devel >= 4.2.0
 BuildRequires:	pkgconfig
+BuildRequires:	xfce4-dev-tools
 Requires:	libxfcegui4 >= 4.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +33,7 @@ mv -f po/{pt_PT,pt}.po
 
 %build
 %{__libtoolize}
-%{__aclocal} -I m4
+%{__aclocal} -I %{_datadir}/xfce4/dev-tools/m4macros
 %{__autoheader}
 %{__automake}
 %{__autoconf}
@@ -59,3 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/xfce4-appfinder.png
 %{_datadir}/xfce4/doc/C/xfce4-appfinder.html
 %{_datadir}/xfce4/doc/C/images/*
+%lang(fr) %{_datadir}/xfce4/doc/fr
