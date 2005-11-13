@@ -1,14 +1,13 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl):	Wyszukiwarka aplikacji dla ¶rodowiska Xfce
 Name: 		xfce4-appfinder
-Version: 	4.2.2
-Release: 	2
+Version: 	4.2.3
+Release: 	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
-# Source0-md5:	0ef8c944e8aa2db06719e02b2c40d70c
+# Source0-md5:	fa6b9dd74114cb28c7352dd0e4592ce2
 Patch0:		%{name}-locale-names.patch
-Patch1:		%{name}-desktop.patch
 URL:		http://www.xfce.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -29,7 +28,6 @@ xfce4-appfinder pokazuje aplikacje zainstalowane w systemie.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 mv -f po/{pt_PT,pt}.po
 
@@ -60,6 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/xfce4-appfinder
 %{_desktopdir}/xfce4-appfinder.desktop
 %{_pixmapsdir}/xfce4-appfinder.png
-%{_datadir}/xfce4/doc/C/xfce4-appfinder.html
-%{_datadir}/xfce4/doc/C/images/*
-%lang(fr) %{_datadir}/xfce4/doc/fr
+%{_datadir}/xfce4/doc/C/*
+%lang(fr) %{_datadir}/xfce4/doc/fr/*
+%lang(he) %{_datadir}/xfce4/doc/he/*
