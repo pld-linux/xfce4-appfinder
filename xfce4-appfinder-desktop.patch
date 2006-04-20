@@ -1,7 +1,15 @@
-diff -urN xfce4-appfinder-4.2.2/src/xfce4-appfinder.desktop fix/xfce4-appfinder-4.2.2/src/xfce4-appfinder.desktop
---- xfce4-appfinder-4.2.2/src/xfce4-appfinder.desktop	2005-05-15 10:10:51.000000000 +0200
-+++ fix/xfce4-appfinder-4.2.2/src/xfce4-appfinder.desktop	2005-05-25 15:36:32.000000000 +0200
-@@ -32,7 +32,7 @@
+diff -urN xfce4-appfinder-4.2.1/src/xfce4-appfinder.desktop fix/xfce4-appfinder-4.2.1/src/xfce4-appfinder.desktop
+--- xfce4-appfinder-4.2.1/src/xfce4-appfinder.desktop	2005-05-15 10:10:51.000000000 +0200
++++ fix/xfce4-appfinder-4.2.1/src/xfce4-appfinder.desktop	2005-05-25 15:36:32.000000000 +0200
+@@ -24,6 +24,7 @@
+ Comment[sk]=Zoznam nainštalovaných aplikácií
+ Comment[fr]=Liste des applications installées
+ Comment[ro]=Lista aplicaţiilor instalate
++Comment[pl]=Wyszukiwanie programów w Xfce 4
+ Comment[ru]=Список установленных приложений
+ Comment[zh_CN]=Xfce 4 程序查找器
+ Comment[eu]=Xfce 4 Aplikazio bilatzailea
+@@ -32,7 +33,7 @@
  Icon=xfce4-appfinder
  Terminal=false
  Type=Application
@@ -10,3 +18,11 @@ diff -urN xfce4-appfinder-4.2.2/src/xfce4-appfinder.desktop fix/xfce4-appfinder-
  GenericName=Appfinder
  GenericName[et]=Appfinder
  GenericName[sk]=Appfinder
+@@ -40,6 +41,7 @@
+ GenericName[ko]=응용프로그램 검색
+ GenericName[lt]=AppFinder
+ GenericName[nl]=Appfinder
++GenericName[pl]=Wyszukiwanie programów
+ GenericName[ro]=Appfinder
+ GenericName[ru]=Поиск программ
+ GenericName[zh_CN]=程序查找器
