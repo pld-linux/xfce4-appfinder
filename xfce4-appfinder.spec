@@ -8,6 +8,7 @@ Group:		X11/Applications
 Source0:	http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
 # Source0-md5:	fa6b9dd74114cb28c7352dd0e4592ce2
 Patch0:		%{name}-locale-names.patch
+Patch1:		%{name}-desktop.patch
 URL:		http://www.xfce.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -28,6 +29,7 @@ xfce4-appfinder pokazuje aplikacje zainstalowane w systemie.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 mv -f po/{pt_PT,pt}.po
 
