@@ -1,11 +1,12 @@
---- xfce4-appfinder-4.2.3/configure.ac.orig	2005-11-05 18:04:29.000000000 +0100
-+++ xfce4-appfinder-4.2.3/configure.ac	2005-11-13 22:10:34.000000000 +0100
-@@ -25,7 +25,7 @@
+diff -urN xfce4-appfinder-4.4.0/configure.in xfce4-appfinder-4.4.0.new/configure.in
+--- xfce4-appfinder-4.4.0/configure.in	2007-01-22 18:11:48.000000000 +0100
++++ xfce4-appfinder-4.4.0.new/configure.in	2007-01-22 18:12:34.000000000 +0100
+@@ -26,7 +26,7 @@
+ AC_HEADER_STDC
+ 
  dnl Check for i18n support
- BM_I18N([xfce4-appfinder], [af be bn_IN ca cs da de el en_GB es es_MX
- 			    et eu fa fi gu he hu hy it ja ko ku lt mr
--			    nl pa pl pt_BR pt_PT ro ru sk sl sv tr uk
-+			    nl pa pl pt_BR pt ro ru sk sl sv tr uk
- 			    zh_CN zh_TW])
+-XDT_I18N([be bn_IN ca cs de dz el en_GB eo es es_MX et eu fa fi fr gl gu he hu hy it ja ka ko lt mk mr nl pa pl pt_BR pt_PT ro ru sk sv tr uk zh_CN zh_TW])
++XDT_I18N([be bn_IN ca cs de dz el en_GB eo es es_MX et eu fa fi fr gl gu he hu hy it ja ka ko lt mk mr nl pa pl pt_BR pt ro ru sk sv tr uk zh_CN zh_TW])
  
  dnl Check for required packages
+ XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.4.0])
