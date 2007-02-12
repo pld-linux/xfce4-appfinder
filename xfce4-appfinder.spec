@@ -1,5 +1,5 @@
 Summary:	Appfinder for the Xfce Desktop Environment
-Summary(pl.UTF-8):   Wyszukiwarka aplikacji dla środowiska Xfce
+Summary(pl.UTF-8):	Wyszukiwarka aplikacji dla środowiska Xfce
 Name:		xfce4-appfinder
 Version:	4.4.0
 Release:	1
