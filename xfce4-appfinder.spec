@@ -1,12 +1,12 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl):	Wyszukiwarka aplikacji dla ¶rodowiska Xfce
 Name:		xfce4-appfinder
-Version:	4.4.0
+Version:	4.4.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	43538217a5502425d738ea8419521b9a
+# Source0-md5:	6239daaafbc35ed2b3ca5f53802ebcbb
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/
 BuildRequires:	autoconf >= 2.50
@@ -17,7 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	libxfcegui4-devel >= %{version}
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
-BuildRequires:	xfce4-dev-tools >= %{version}
+BuildRequires:	xfce4-dev-tools >= 4.4.0
 Requires(post,postun):	gtk+2
 Requires(post,postun):	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
