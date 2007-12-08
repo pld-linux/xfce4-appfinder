@@ -1,12 +1,12 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl.UTF-8):	Wyszukiwarka aplikacji dla środowiska Xfce
 Name:		xfce4-appfinder
-Version:	4.4.1
+Version:	4.4.2
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	6239daaafbc35ed2b3ca5f53802ebcbb
+# Source0-md5:	0bdd0b1e96a1e1cf50ce5d582758b992
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/
 BuildRequires:	autoconf >= 2.50
@@ -32,9 +32,11 @@ xfce4-appfinder pokazuje aplikacje zainstalowane w systemie.
 %setup -q
 %patch0 -p1
 
+mv -f po/{nb_NO,nb}.po
 mv -f po/{pt_PT,pt}.po
 
 %build
+%{__intltoolize}
 %{__libtoolize}
 %{__aclocal}
 %{__autoheader}
