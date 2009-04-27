@@ -1,12 +1,12 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl.UTF-8):	Wyszukiwarka aplikacji dla środowiska Xfce
 Name:		xfce4-appfinder
-Version:	4.6.0
+Version:	4.6.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	414b20e3569130348d96b0e74c7d1f3f
+# Source0-md5:	a1bc7d88100cfd92714a300be531589b
 URL:		http://www.xfce.org/projects/xfce4-appfinder/
 BuildRequires:	Thunar-devel >= 1.0.0
 BuildRequires:	autoconf >= 2.50
@@ -51,9 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-mv $RPM_BUILD_ROOT%{_datadir}/locale/nb{_NO,}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/pt{_PT,}
 
 %find_lang %{name}
 
