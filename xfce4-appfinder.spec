@@ -1,12 +1,12 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl.UTF-8):	Wyszukiwarka aplikacji dla środowiska Xfce
 Name:		xfce4-appfinder
-Version:	4.6.1
-Release:	1
+Version:	4.7.1
+Release:	0.1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	a1bc7d88100cfd92714a300be531589b
+Source0:	http://www.xfce.org/archive/xfce/4.8pre1/src/%{name}-%{version}.tar.bz2
+# Source0-md5:	6769edabc4156658aca9422b29c18644
 URL:		http://www.xfce.org/projects/xfce4-appfinder/
 BuildRequires:	Thunar-devel >= 1.0.0
 BuildRequires:	autoconf >= 2.50
@@ -16,13 +16,16 @@ BuildRequires:	glib2-devel >= 1:2.12.0
 BuildRequires:	gtk+2-devel >= 2:2.10.6
 BuildRequires:	intltool
 BuildRequires:	libtool
-BuildRequires:	libxfce4menu-devel >= %{version}
-BuildRequires:	libxfce4util-devel >= %{version}
-BuildRequires:	libxfcegui4-devel >= %{version}
+#BuildRequires:	libxfce4util-devel >= %{version}
+#BuildRequires:	libxfce4ui-devel >= %{version}
+BuildRequires:	garcon-devel >= 0.1.3
+BuildRequires:	libxfce4util-devel >= 4.7.0
+BuildRequires:	libxfce4ui-devel >= 4.7.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
-BuildRequires:	xfce4-dev-tools >= 4.6.0
-BuildRequires:	xfconf-devel >= %{version}
+BuildRequires:	xfce4-dev-tools >= 4.7.0
+#BuildRequires:	xfconf-devel >= %{version}
+BuildRequires:	xfconf-devel >= 4.7.0
 Requires(post,postun):	gtk+2
 Requires(post,postun):	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
