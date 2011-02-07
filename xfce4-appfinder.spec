@@ -1,33 +1,32 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl.UTF-8):	Wyszukiwarka aplikacji dla środowiska Xfce
 Name:		xfce4-appfinder
-Version:	4.7.1
-Release:	0.1
+Version:	4.8.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://www.xfce.org/archive/xfce/4.8pre1/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	6769edabc4156658aca9422b29c18644
-URL:		http://www.xfce.org/projects/xfce4-appfinder/
-BuildRequires:	Thunar-devel >= 1.0.0
+Source0:	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.8/%{name}-%{version}.tar.bz2
+# Source0-md5:	fb4797ef91b90d111b989e98c3e000e0
+URL:		http://www.xfce.org/projects/xfce4-appfinder
+#BuildRequires:	Thunar-devel >= 1.0.0
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	garcon-devel >= 0.1.3
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.12.0
-BuildRequires:	gtk+2-devel >= 2:2.10.6
+BuildRequires:	glib2-devel >= 1:2.16.0
+BuildRequires:	gtk+2-devel >= 2:2.14.0
 BuildRequires:	intltool
 BuildRequires:	libtool
-#BuildRequires:	libxfce4util-devel >= %{version}
-#BuildRequires:	libxfce4ui-devel >= %{version}
-BuildRequires:	garcon-devel >= 0.1.3
-BuildRequires:	libxfce4util-devel >= 4.7.0
-BuildRequires:	libxfce4ui-devel >= 4.7.0
+BuildRequires:	libxfce4ui-devel >= 4.8.0
+BuildRequires:	libxfce4util-devel >= 4.8.0
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.311
-BuildRequires:	xfce4-dev-tools >= 4.7.0
-#BuildRequires:	xfconf-devel >= %{version}
-BuildRequires:	xfconf-devel >= 4.7.0
-Requires(post,postun):	gtk+2
-Requires(post,postun):	hicolor-icon-theme
+BuildRequires:	rpmbuild(macros) >= 1.601
+BuildRequires:	xfce4-dev-tools >= 4.8.0
+BuildRequires:	xfconf-devel >= 4.8.0
+Requires:	garcon >= 0.1.3
+Requires:	gtk-update-icon-cache
+Requires:	hicolor-icon-theme
+Requires:	xfconf >= 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +45,9 @@ xfce4-appfinder pokazuje aplikacje zainstalowane w systemie.
 %{__autoheader}
 %{__automake}
 %{__autoconf}
-%configure
+%configure \
+	--disable-silent-rules
+
 %{__make}
 
 %install
@@ -54,6 +55,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
 
 %find_lang %{name}
 
