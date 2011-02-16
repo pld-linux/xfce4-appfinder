@@ -1,30 +1,31 @@
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl.UTF-8):	Wyszukiwarka aplikacji dla środowiska Xfce
 Name:		xfce4-appfinder
-Version:	4.6.2
-Release:	2
+Version:	4.8.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	7752e43578b821e35010bcd3762da166
-URL:		http://www.xfce.org/projects/xfce4-appfinder/
-BuildRequires:	Thunar-devel >= 1.0.0
+Source0:	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.8/%{name}-%{version}.tar.bz2
+# Source0-md5:	fb4797ef91b90d111b989e98c3e000e0
+URL:		http://www.xfce.org/projects/xfce4-appfinder
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	garcon-devel >= 0.1.3
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.12.0
-BuildRequires:	gtk+2-devel >= 2:2.10.6
+BuildRequires:	glib2-devel >= 1:2.16.0
+BuildRequires:	gtk+2-devel >= 2:2.14.0
 BuildRequires:	intltool
 BuildRequires:	libtool
-BuildRequires:	libxfce4menu-devel >= %{version}
-BuildRequires:	libxfce4util-devel >= %{version}
-BuildRequires:	libxfcegui4-devel >= %{version}
+BuildRequires:	libxfce4ui-devel >= 4.8.0
+BuildRequires:	libxfce4util-devel >= 4.8.0
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.311
-BuildRequires:	xfce4-dev-tools >= 4.6.0
-BuildRequires:	xfconf-devel >= %{version}
-Requires(post,postun):	gtk-update-icon-cache
-Requires(post,postun):	hicolor-icon-theme
+BuildRequires:	rpmbuild(macros) >= 1.601
+BuildRequires:	xfce4-dev-tools >= 4.8.0
+BuildRequires:	xfconf-devel >= 4.8.0
+Requires:	garcon >= 0.1.3
+Requires:	gtk-update-icon-cache
+Requires:	hicolor-icon-theme
+Requires:	xfconf >= 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,7 +44,9 @@ xfce4-appfinder pokazuje aplikacje zainstalowane w systemie.
 %{__autoheader}
 %{__automake}
 %{__autoconf}
-%configure
+%configure \
+	--disable-silent-rules
+
 %{__make}
 
 %install
@@ -52,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
 
 %find_lang %{name}
 
