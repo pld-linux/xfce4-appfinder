@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.10/%{name}-%{version}.tar.bz2
-# Source0-md5:	fb4797ef91b90d111b989e98c3e000e0
+# Source0-md5:	799f70a9ad67b450da67810a5107e623
 URL:		http://www.xfce.org/projects/xfce4-appfinder
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
