@@ -62,15 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-%update_icon_cache hicolor
-
-%postun
-%update_icon_cache hicolor
-
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/xfce4-appfinder
 %{_desktopdir}/xfce4-appfinder.desktop
-%{_iconsdir}/hicolor/48x48/apps/xfce4-appfinder.png
