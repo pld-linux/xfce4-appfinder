@@ -1,33 +1,33 @@
 #
 # Conditional build:
-%bcond_with	gtk3		# build with gtk+3 (disables gtk2 support)
+%bcond_without	gtk3		# build with gtk+3 (disables gtk2 support)
 #
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl.UTF-8):	Wyszukiwarka aplikacji dla środowiska Xfce
 Name:		xfce4-appfinder
-Version:	4.11.0
-Release:	2
+Version:	4.12.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.11/%{name}-%{version}.tar.bz2
-# Source0-md5:	8b01363bf10fc6da5f0a21664c5b02c5
+Source0:	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.12/%{name}-%{version}.tar.bz2
+# Source0-md5:	0b238b30686388c507c119b12664f1a1
 URL:		http://www.xfce.org/projects/xfce4-appfinder
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	garcon-devel >= 0.3.0
+BuildRequires:	garcon-devel >= 0.4.0
 BuildRequires:	gettext-tools
-BuildRequires:	glib2-devel >= 1:2.16.0
-%{!?with_gtk3:BuildRequires:	gtk+2-devel >= 2:2.14.0}
+BuildRequires:	glib2-devel >= 1:2.30.0
+%{!?with_gtk3:BuildRequires:	gtk+2-devel >= 2:2.24.0}
 %{?with_gtk3:BuildRequires:	gtk+3-devel}
 BuildRequires:	intltool
 BuildRequires:	libtool
-BuildRequires:	libxfce4ui-devel >= 4.11.0
-BuildRequires:	libxfce4util-devel >= 4.11.0
+BuildRequires:	libxfce4ui-devel >= 4.12.0
+BuildRequires:	libxfce4util-devel >= 4.12.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.601
-BuildRequires:	xfce4-dev-tools >= 4.11.0
-BuildRequires:	xfconf-devel >= 4.10.0
-Requires:	garcon >= 0.2.0
+BuildRequires:	xfce4-dev-tools >= 4.12.0
+BuildRequires:	xfconf-devel >= 4.12.0
+Requires:	garcon >= 0.4.0
 Requires:	gtk-update-icon-cache
 Requires:	hicolor-icon-theme
 Requires:	xfconf >= 4.10.0
@@ -75,3 +75,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/xfrun4
 %{_desktopdir}/xfce4-appfinder.desktop
 %{_desktopdir}/xfce4-run.desktop
+%{_datadir}/appdata/xfce4-appfinder.appdata.xml
