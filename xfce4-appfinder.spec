@@ -1,24 +1,19 @@
-#
-# Conditional build:
-%bcond_without	gtk3		# build with gtk+3 (disables gtk2 support)
-#
 Summary:	Appfinder for the Xfce Desktop Environment
 Summary(pl.UTF-8):	Wyszukiwarka aplikacji dla środowiska Xfce
 Name:		xfce4-appfinder
-Version:	4.12.0
+Version:	4.13.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.12/%{name}-%{version}.tar.bz2
-# Source0-md5:	0b238b30686388c507c119b12664f1a1
+Source0:	http://archive.xfce.org/src/xfce/xfce4-appfinder/4.13/%{name}-%{version}.tar.bz2
+# Source0-md5:	6b6cf080c891f7945953f8084a901552
 URL:		http://www.xfce.org/projects/xfce4-appfinder
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	garcon-devel >= 0.4.0
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.30.0
-%{!?with_gtk3:BuildRequires:	gtk+2-devel >= 2:2.24.0}
-%{?with_gtk3:BuildRequires:	gtk+3-devel}
+BuildRequires:	gtk+3-devel
 BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel >= 4.12.0
@@ -50,7 +45,6 @@ xfce4-appfinder pokazuje aplikacje zainstalowane w systemie.
 %{__automake}
 %{__autoconf}
 %configure \
-	%{__enable_disable gtk3} \
 	--disable-silent-rules
 
 %{__make}
